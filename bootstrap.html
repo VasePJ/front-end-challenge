@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Front-End Challenge</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    </head>
+    <body class="bg-dark">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+        <script src="bootstrap.js"></script>
+        <div id="content" class="container">
+            <script id="entry-template" type="text/x-handlebars-template">
+                <div class="row py-3">
+                    <div class="col-md-5 mb-3 mb-md-0">
+                        <div class="card h-100 p-4">
+                            <div class="card-body">
+                                <h2 class="card-title border-primary border-bottom pb-4">{{cardTitle}}</h2>
+                                <p class="card-text mt-4">{{cardText}}</p>
+                            </div>
+                            <div class="card-footer bg-white border-white">
+                                <button type="button" class="btn btn-primary go-somewhere-button">Go Somewhere</button>
+                                <button type="button" class="btn btn-outline-primary">Go back</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 pl-md-0">
+                    <div class="media border rounded p-3 mb-3 bg-white panel-right">
+                            <img src="{{firstImageSource}}" class="mr-4">
+                            <div class="media-body">
+                                <h5>
+                                    <span class="border-primary border-bottom pb-1">{{firstHeading}}</span>
+                                </h5>
+                                <div>
+                                    {{firstBodyText}}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="media border rounded p-3 mb-3 bg-white panel-right">
+                            <img src="{{secondImageSource}}" class="mr-4">
+                            <div class="media-body">
+                                <h5>
+                                    <span class="border-primary border-bottom pb-1">{{secondHeading}}</span>
+                                </h5>
+                                <div>
+                                    {{secondBodyText}}
+                                </div>
+                            </div>
+                    </div>
+                        <div class="media border rounded p-3 bg-white panel-right">
+                            <img src="{{thirdImageSource}}" class="mr-4">
+                            <div class="media-body">
+                                <h5>
+                                    <span class="border-primary border-bottom pb-1">{{thirdHeading}}</span>
+                                </h5>
+                                <div>
+                                    {{thirdBodyText}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </script>
+        </div>
+    </body>
+    <style>
+        @media screen and (max-width: 430px) {
+            .panel-right {
+                flex-flow: column;
+            }
+            .panel-right .media-body {
+                margin-top: 10px;
+            }
+        }
+        @media screen and (max-width: 340px) {
+            .go-somewhere-button {
+                margin-bottom: 4px; 
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .go-somewhere-button {
+                margin-bottom: 4px; 
+            }
+        }
+    </style>
+</html>
